@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتب دينية</title>
+    
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="../_css/stylemenu.css">
+</head>
+<body>
+
+    <!-- Header section starts -->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> مكتبة وئام</a>
+        <nav class="navbar">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../_html/promotion.html">التخفيضات</a>
+            <a href="../_html/ecrivain.html">المؤلفين</a>
+            <a href="../_html/categoreies.html">التصنيفات</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <a href="../_html/formulaire.html"><div class="fas fa-user" id="login-btn"></div></a> 
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <a href="favorite.html"><div class="fas fa-heart" id="favorites-icon">
+                <span id="favorites-count"></span>
+        </div></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="ابحث الآن...">
+            <label for="search-box" class="search-box"></label>
+        </form>
+
+        <div class="cart">
+            <h2 class="cart-title">السلة</h2>
+            <div class="cart-content">
+                <!-- Articles du panier ici -->
+            </div>
+            <div class="total">
+                <div class="total-title">المجموع</div>
+                <div class="total-price">0 د.م</div>
+            </div>
+            <button type="button" class="btn-buy">اشتري الان</button>
+            <i class="bx bx-x" id="close-cart"></i>
+        </div>
+
+
+
+    </header>
+    <!-- Header section ends -->
+<!-- Author Section -->
+<div class="home">
+  <section id="author" class="author-section">
+     <div class="author-container">
+         <div class="author-info">
+             
+         </div>
+      </div>
+ </section>
+    <!-- Discount Section -->
+    <section class="features" id="features">
+        <h1 class="heading">التخفيضات</h1>
+        <div class="box-container"> 
+
+            <!-- Product 1 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/رسائل-من-القرآن.webp" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>رسائل من القرآن</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/لأنك الله.jpeg" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>لأنك الله</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/فاتتني صلاة.jpeg" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>فاتتني صلاة!!</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/أنت-ايضا-صحابية1.webp" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>أنت أيضا صحابية</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/رسائل من النبي صلى الله عليه وسلم.webp" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>رسائل من النبي</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/مع النبي.jpeg" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>مع النبي</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/كوني صحابية.jpeg" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>كوني صحابية</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="box">
+                <figure class="cardbanner">
+                    <img src="../_image/رسائل من الصحابة.jpg" alt="">
+                    <div class="btn-wrapper">
+                        <button class="product-btn">
+                            <i class="fas fa-heart"></i>
+                            <div class="tooltip">Ajouter aux favoris</div>
+                        </button>
+                        <button class="product-btn">
+                            <i class="fas fa-eye"></i>
+                            <div class="tooltip">Aperçu rapide</div>
+                        </button>
+                    </div>
+                </figure>
+                <div class="card-content">
+                    <h3>رسائل من الصحابة</h3>
+                    <div class="price-wrapper">
+                        <data class="price">Prix : 50dhs</data>
+                    </div>
+                    <button class="btn">اضف الى السلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Section des informations sur la librairie -->
+             
+            <div class="footer-section">
+                <h3>مكتبة وئام </h3>
+                <p>مرحبا بكم في متجرنا للكتب على الانترنت! اكتشف مجموعة واسعة من الكتب التي تقدم عناوين لجميع الأذواق والأعمار</p>
+            </div>
+    
+            <!-- Section des informations de contact -->
+            <div class="footer-section">
+                <h3>اتصل بنا</h3>
+                <p>البريد الإلكتروني: contact@librairiewiam.com</p>
+                <p>الهاتف: +1234567890</p>
+            </div>
+    
+            <!-- Section des réseaux sociaux -->
+            <div class="footer-section social-media">
+                <h3>تابعنا</h3>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    
+        <!-- Section de copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Librairie Wiam. Tous droits réservés.</p>
+        </div>
+     </footer>
+
+    <script src="../_js/tous.js"></script>
+</body>
+</html>

@@ -1,0 +1,851 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --rose: #d49090;
+    --rose_blanc : #5a6372;
+    --light-color: #757575;
+    --box-shadow: 0 .5rem 1.5rem rgba(15, 15, 15, 0.1);
+    --border: 2rem solid rgba(19, 19, 19, 0.1);
+    --outline: 1rem solid rgba(28, 28, 28, 0.1);
+    --outline-hover: 1.5rem solid var(--rose_blanc);
+}
+ 
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background-color: #eee;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--rose_blanc);
+}
+
+.heading span {
+    background-color: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: 5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    border: 2px solid var(--rose_blanc);
+    color: var(--rose_blanc);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--rose_blanc);
+}
+
+.header .logo i {
+    color: var(--rose);
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 2.2rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--rose_blanc);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--rose_blanc);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--rose);
+}
+
+.header .login-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--rose_blanc);
+}
+
+.header .login-form .box {
+    width: 100%;
+    margin: 15px 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    color: var(--rose_blanc);
+    text-transform: none;
+    height: 40px;
+}
+
+.header .login-form p {
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a {
+    color: var(--rose);
+    text-decoration: underline;
+}
+/* Style pour les messages d'erreur */
+.error-message {
+    color: red;  /* Texte en rouge */
+    font-size: 12px;  /* Taille de police plus petite */
+    margin-top: 5px;  /* Un peu d'espace entre le champ et le message */
+}
+.home {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    padding: 3rem 9%;
+    background: url(../_image/baack.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0; /* Retirer le margin-top pour que la section prenne toute la hauteur de la page */
+    height: 100vh; /* La section prend toute la hauteur de la fenêtre */
+}
+
+.content-box {
+    display: flex;
+    justify-content: center; /* Centre le contenu dans .content-box */
+    width: 100%;
+    text-align: center; /* Centrer le texte à l'intérieur de .content-box */
+}
+
+.text-container {
+    max-width: 60%; /* Limiter la largeur de la zone de texte si nécessaire */
+}
+
+.home .h1 {
+    font-size: 50px;
+    color: #802323;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.home .h1 span {
+    font-size: 50px;
+    color: #912424;
+    margin-left: 15px; /* Un petit espacement entre "مكتبة" et "وئام" */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.home .text-container p {
+    font-size: 35px;
+    color: #1b1b1b;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Panier caché par défaut */
+.cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #f0c9c9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.cart.active {
+    display: block; /* Afficher le panier lorsque la classe active est ajoutée */
+}
+
+/* Titre du panier */
+.cart-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: #802323;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Contenu du panier */
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Boîte de produit dans le panier */
+.cart-box {
+    display: flex;
+    align-items: center; /* Aligner les éléments au centre */
+    gap: 15px; /* Espacement entre l'image et le contenu */
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 10px;
+}
+
+/* Image du produit */
+.cart-img {
+    width: 150px; /* Augmenter la taille de l'image */
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Boîte de détails du produit */
+.detail-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Nom du produit */
+.cart-product-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Prix du produit */
+.cart-price {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Quantité */
+.cart-quantity {
+    border: 1px solid #ebc5c5;
+    outline-color: #d49090;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Retirer un produit */
+.cart-remove {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #e84c3d;
+    cursor: pointer;
+}
+
+/* Total */
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid #757575;
+}
+
+/* Titre du total */
+.total-title {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Prix total */
+.total-price {
+    margin-left: 0.5rem;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Bouton d'achat */
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #5a6372;
+    color: #d49090;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+}
+
+/* Effet de survol du bouton d'achat */
+.btn-buy:hover {
+    background: #CD5C5C;
+}
+
+/* Icône de fermeture du panier */
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: #e6cece;
+    cursor: pointer;
+}
+
+
+.products .products-slider {
+    padding: 1rem;
+}
+
+.products .products-slider:first-child {
+    margin-bottom: 2rem;
+}
+
+.products {
+    background-color: #f7f7f7;
+    background-color: #ebc5c5;
+}
+
+.products .heading {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.products .heading span {
+    background-color: var(--rose); 
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+.product-slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.product-slider .box {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    width: calc(25% - 2rem);
+    transition: transform 0.3s ease;
+    height: 440px;
+    margin-bottom: 2rem;
+
+}
+
+.product-slider .box:hover {
+    transform: scale(1.05); /* Augmente légèrement la taille de l'élément */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.product-slider .box img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.product-slider .box h3 {
+    font-size: 2rem;
+    color: var(--rose_blanc);
+    margin: 1.5rem 0;
+}
+
+.product-slider .box .price {
+    font-size: 1.8rem;
+    color: var(--rose);
+    margin: 0.5rem 0;
+}
+
+.product-slider .box .stars i {
+    font-size: 1.5rem;
+    color: var(--rose);
+    padding-right: 0.2rem;
+}
+
+.product-slider .box .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--rose);
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: #e6cece;
+    padding: 1rem 0;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style du footer */
+footer {
+    background-color: #f4f4f4;
+    background-size: contain;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    
+}
+
+/* Conteneur du footer */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    
+}
+
+/* Sections du footer */
+.footer-section {
+    flex: 1;
+    padding: 15px;
+    width: 260px;
+    height: 160px;
+}
+
+
+/* Titre de chaque section du footer */
+.footer-section h3 {
+    font-size: 18px;
+    color: #CD5C5C;
+    margin-bottom: 10px;
+}
+
+
+/* Style pour les liens sociaux */
+.social-media a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #CD5C5C;
+}
+
+/* Section de bas de footer (copyright) */
+.footer-bottom {
+    background-color: #e2e2e2;
+    padding: 15px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+/* Logo */
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--rose_blanc);
+}
+
+.header .logo i {
+    color: var(--rose);
+}
+
+/* Menu de navigation */
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+
+/* Icônes de la barre supérieure */
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--rose_blanc);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+/* Le bouton menu */
+#menu-btn {
+    display: none; /* Par défaut, on ne montre pas le bouton hamburger */
+}
+
+@media (max-width: 768px) {
+    /* Cacher les liens du menu par défaut */
+    .header .navbar {
+        display: none; /* Cache les éléments du menu sur mobile */
+    }
+
+    /* Afficher le bouton hamburger */
+    #menu-btn {
+        display: block; /* Afficher le bouton hamburger */
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--rose);
+    }
+
+    /* Lorsque le menu est actif, l'afficher */
+    .navbar.active {
+        display: flex; /* Affiche le menu */
+        flex-direction: column; /* Disposer les éléments du menu en colonne */
+        align-items: center; /* Centrer les éléments */
+        position: absolute;
+        top: 100px; /* Sous l'entête */
+        left: 0; /* Alignement à gauche */
+        right: 0; /* Alignement à droite */
+        background-color: #fff; /* Fond blanc pour le menu */
+        box-shadow: var(--box-shadow);
+        padding: 1rem 0;
+        width: 100%; /* Menu en pleine largeur */
+    }
+
+    /* Style des liens de menu lorsqu'il est actif */
+    .navbar a {
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        color: #333;
+        text-align: center;
+        width: 100%; /* Prendre toute la largeur pour un meilleur affichage */
+    }
+
+    /* Ajouter un hover sur les liens du menu */
+    .navbar a:hover {
+        background-color: #f0f0f0;
+    }
+}
+/* Media Query pour les tablettes (max-width: 992px) */
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column; /* La disposition passe en colonne */
+        padding: 2rem 5%; /* Ajustement du padding */
+        background-size: contain; /* Ajuster l'image de fond pour qu'elle ne dépasse pas */
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    .home .content {
+        width: 100%; /* La largeur du texte devient 100% */
+        text-align: center; /* Centrer le texte */
+    }
+
+    .home .content h3 {
+        font-size: 20px; /* Réduire la taille du titre */
+    }
+    .home .content h3 span{
+        font-size: 30px; /* Réduire la taille du titre */
+    }
+
+    .home .content .paragraph {
+        font-size: 12px; 
+    }
+
+    .home .image-container {
+        width: 100%; /* L'image prend 100% de la largeur */
+        margin-top: 2rem; /* Espacement au-dessus de l'image */
+    }
+
+    .home .image-container img {
+        height: 350px; /* Réduire la hauteur de l'image */
+    }
+
+    .products .heading {
+        font-size: 3rem; /* Réduire la taille du titre des produits */
+    }
+
+    .product-slider {
+        gap: 1.5rem; /* Espacement réduit entre les produits */
+    }
+
+    .product-slider .box {
+        height: 370px; /* Deux produits par ligne */
+    }
+}
+
+/* Media Query pour les petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+    .home {
+        padding: 2rem 4%; /* Ajuster le padding pour un écran plus petit */
+    }
+
+    .home .content {
+        width: 100%;
+    }
+
+    .home .image-container {
+        width: 100%; /* Image de fond prend 100% */
+    }
+
+    .products .heading {
+        font-size: 2.5rem; /* Réduire encore la taille du titre des produits */
+    }
+
+    .product-slider .box {
+        width: calc(50% - 1.5rem); /* Deux produits par ligne */
+    }
+}
+
+/* Media Query pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .home {
+        padding: 1.5rem 3%; /* Réduire le padding pour les très petits écrans */
+    }
+
+    .home .content h3 {
+        font-size: 25px; /* Taille de titre réduite */
+    }
+
+    .home .content p {
+        font-size: 18px; /* Réduire la taille du texte */
+    }
+
+    .home .image-container img {
+        height: 300px; /* Réduire la hauteur de l'image */
+    }
+
+    .products .heading {
+        font-size: 2rem; /* Réduire la taille du titre des produits */
+    }
+
+    .product-slider {
+        gap: 1rem; /* Espacement entre les produits réduit */
+    }
+
+    .product-slider .box {
+        width: 100%; /* Un produit par ligne */
+    }
+
+    .product-slider .box img {
+        max-width: 180px; /* Réduire la taille de l'image des produits */
+        height: 180px; /* Ajuster la hauteur */
+    }
+
+    .product-slider .box h3 {
+        font-size: 1.5rem; /* Réduire la taille du titre du produit */
+    }
+
+    .product-slider .box .price {
+        font-size: 1.4rem; /* Réduire la taille du prix */
+    }
+
+    .product-slider .box .stars i {
+        font-size: 1.2rem; /* Réduire la taille des étoiles */
+    }
+
+    .product-slider .box .btn {
+        font-size: 1.4rem; /* Réduire la taille du bouton */
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 480px) {
+    .footer-container {
+        display: flex;
+        flex-direction: row; /* Conserver une disposition horizontale */
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        font-size: 10px;
+    }
+    
+    .footer-section {
+        flex: 1 1 30%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: -30px;
+        font-size: 10px;
+    }
+    .footer-section h3{
+        font-size: 10px;
+    }
+    .footer-section.social-media a {
+        font-size: 14px;
+        margin: 5px 0;
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        padding: 10px;
+        font-size: 12px;
+    }
+}

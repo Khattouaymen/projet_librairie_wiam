@@ -1,0 +1,1430 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --rose: #d49090;
+    --rose_blanc: #5a6372;
+    --light-color: #757575;
+    --box-shadow: 0 .5rem 1.5rem rgba(15, 15, 15, 0.1);
+    --border: 2rem solid rgba(19, 19, 19, 0.1);
+    --outline: 1rem solid rgba(28, 28, 28, 0.1);
+    --outline-hover: 1.5rem solid var(--rose_blanc);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background-color: #eee;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--rose_blanc);
+}
+
+.heading span {
+    background-color: var(--rose);
+    color: #fff;
+    display: inline-block;
+    padding: 5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    border: 2px solid var(--rose_blanc);
+    color: var(--rose_blanc);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--rose_blanc);
+}
+
+.header .logo i {
+    color: var(--rose);
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--rose_blanc);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--rose_blanc);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--rose);
+}
+
+.header .login-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--rose_blanc);
+}
+
+.header .login-form .box {
+    width: 100%;
+    margin: 15px 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    color: var(--rose_blanc);
+    text-transform: none;
+    height: 40px;
+}
+
+.header .login-form p {
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a {
+    color: var(--rose);
+    text-decoration: underline;
+}
+
+/* Home */
+.home {
+    background: url(../_image/back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3 {
+    color: var(--rose_blanc);
+    font-size: 3rem;
+}
+
+.home .content h3 span {
+    color: var(--rose);
+}
+
+.home .content p {
+    color: var(--light-color);
+    font-size: 15px;
+    padding: 1.7rem 0;
+    line-height: 1.8;
+}
+
+/* Style pour les titres h1 */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+h1 span {
+    background-color: var(--rose);
+    color: #fff;
+    display: inline-block;
+    padding: 5rem 3rem;
+}
+
+
+.features .box {
+    background: #f0f8f7;
+    padding: 3rem 2rem;
+    text-align: center;
+    outline: .2rem solid transparent;
+    transition: transform 0.3s ease;  /* Animation fluide lors du survol */
+    width: 250px;
+    height: 400px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* Agrandir la carte quand la souris la survole */
+.features .box:hover {
+    transform: scale(1.1);  /* Agrandir la carte à 110% */
+   
+}
+
+/* CSS pour la section Features */
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-left: -30px;
+}
+
+.features .heading {
+    text-align: center;
+    font-size:40px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+    margin-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.features .box {
+    background: #f0f8f7;
+    padding: 3rem 2rem;
+    text-align: center;
+    outline: .2rem solid transparent;
+    transition: .25s ease;
+    width: 250px;
+    height: 400px;
+}
+
+.features .box:hover, .features .box:focus-within {
+    outline-color: #cd9999;
+}
+
+.features .box .cardbanner {
+    position: relative;
+    margin-block-end: 2rem;
+}
+
+.features .box .cardbanner img {
+    width: 200px;
+    height: 200px;
+    transition: .25s ease;
+    border-radius: 15px;
+}
+
+.features .box:hover .cardbanner img {
+    opacity: 0.6;
+}
+
+.features .box .btn-wrapper {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.features .box .btn-wrapper .product-btn {
+    position: relative;
+    background: #ca9a9a;
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.2rem 1.4rem;
+    border-radius: 50%;
+    transition: .25s ease;
+    opacity: 0;
+}
+
+.features .box:hover .btn-wrapper .product-btn {
+    opacity: 1;
+}
+
+.features .box .product-btn:hover, .features .box .product-btn:focus-within {
+    background: #1e272e;
+}
+
+.features .box .product-btn:hover .tooltip, .features .box .product-btn:focus-within .tooltip {
+    opacity: 1;
+}
+.features .box .btn:hover {
+    transform: scale(1.1);  
+   
+}
+.features .box .tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.9);
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    min-width: max-content;
+    padding: .4rem 1.2rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: .25s ease;
+}
+
+.features .box .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.9);
+    border-right-color: rgba(0,0,0,0.9);
+}
+
+.features .box .card-content {
+    padding: 1rem 0;
+}
+
+.features .box .card-content h3 {
+    color: #945858;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.features .box .price-wrapper {
+    color: rgb(48, 41, 41);
+    font-weight: bold;
+    font-size: 13px; /* Taille de la police du prix réduite */
+}
+
+.features .box .price-wrapper .del {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.features .box .price-wrapper .price {
+    color: #af6d6d;
+    margin-inline-start: .4rem;
+}
+
+.features .box .btn {
+    padding: .9rem 1.6rem;
+    background-color: #a86464;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.features .box .btn:hover {
+    background-color: #a86464;
+}
+
+
+/* Panier caché par défaut */
+.cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #f0c9c9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.cart.active {
+    display: block; /* Afficher le panier lorsque la classe active est ajoutée */
+}
+
+/* Titre du panier */
+.cart-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: #802323;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Contenu du panier */
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Boîte de produit dans le panier */
+.cart-box {
+    display: flex;
+    align-items: center; /* Aligner les éléments au centre */
+    gap: 15px; /* Espacement entre l'image et le contenu */
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 10px;
+}
+
+/* Image du produit */
+.cart-img {
+    width: 150px; /* Augmenter la taille de l'image */
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Boîte de détails du produit */
+.detail-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Nom du produit */
+.cart-product-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Prix du produit */
+.cart-price {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Quantité */
+.cart-quantity {
+    border: 1px solid #ebc5c5;
+    outline-color: #d49090;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Retirer un produit */
+.cart-remove {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #e84c3d;
+    cursor: pointer;
+}
+
+/* Total */
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid #757575;
+}
+
+/* Titre du total */
+.total-title {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Prix total */
+.total-price {
+    margin-left: 0.5rem;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Bouton d'achat */
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #5a6372;
+    color: #d49090;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+}
+
+/* Effet de survol du bouton d'achat */
+.btn-buy:hover {
+    background: #CD5C5C;
+}
+
+
+
+
+/* Icône de fermeture du panier */
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: #e6cece;
+    cursor: pointer;
+}
+
+/* Product Detail Section */
+
+
+.homme{
+    margin-top: 20px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 740px;
+   background-image: url(../_image/back.jpg);
+
+}
+
+.product-detail {
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Conteneur de l'image avec cadre */
+.product-image {
+    border: 3px solid #e0e0e0; /* Bordure gris clair */
+    padding: 10px; /* Espacement entre l'image et la bordure */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: box-shadow 0.3s ease; /* Transition pour l'ombre au survol */
+
+}
+
+
+.product-image .image {
+    margin-right: 60px;
+    margin-left: 50px;
+    margin-top: 60px;
+    width: 350px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+   
+}
+
+.product-image img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+.product-info {
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+.product-info h1 { 
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.product-info .description {
+    font-size: 25px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-info .prix{
+    color: rgb(77, 77, 179);
+}
+.product-info span {
+    color: #8f5050;
+    margin-inline-start: .4rem;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+.special{
+    color: #a86464;
+}
+
+.product-info del{
+    color: #d50707;
+    text-decoration: line-through;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.product-info .buy-btn {
+    background-color: #b20000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-info .buy-btn:hover {
+    background-color: #9e0000;
+}
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background-color: #a86464;
+    border: 1px solid #a86464;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 39px;
+}
+.btn{
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #a86464;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    }
+    
+.btn:hover {
+    background-color: #a86464;
+    }
+
+.botn{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #a86464;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 400px;
+    border-radius: 10px;
+    }
+
+.botn:hover {
+        background-color: #a86464;
+    }
+
+#quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.login-form {
+    background-color: #fff;
+    width: 500px;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    height: 530px;
+}
+
+.login-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #a86464;
+}
+
+.login-form .box {
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-form .box:focus {
+    border-color: #ca9a9a;
+
+}
+
+.login-form .botn {
+    background-color: #ca9a9a;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login-form .botn:hover {
+    background-color: #ca9a9a;
+}
+
+.login-form .p {
+    text-align: center;
+    font-size: 12px;
+}
+
+.login-form .p a {
+    color: #ca9a9a;
+    text-decoration: none;
+}
+
+.login-form .p a:hover {
+    text-decoration: underline;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Categories Section */
+.categories {
+    padding: 4rem 8rem;
+    background-color: #fff;
+    background: url(../_image/back.jpg);
+    background-size: cover;  /* Pour que l'image couvre toute la page */
+    background-repeat: no-repeat;
+}
+
+.categories .heading {
+    text-align: center;
+    font-size:40px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 60px;
+}
+
+.categories .heading span {
+    color: #fff;
+    border-radius: 10px;
+}
+
+.categories .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.categories .box {
+    background: #f0f8f7;
+    padding: 3rem 2rem;
+    text-align: center;
+    outline: .2rem solid transparent;
+    transition: .25s ease;
+    width: 250px;
+    height: 400px;
+    position: relative;
+    border-radius: 15px;
+}
+.categories .box:hover {
+    transform: scale(1.1);  
+   
+}
+.categories .box:hover, .categories .box:focus-within {
+    outline-color: #cd9999;
+}
+.categories .box img {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+.categories .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.categories .btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #a86464;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.categories .btn:hover {
+    background-color: #a86464;
+    transform: scale(1.1);  
+}
+
+
+/* Style du footer */
+footer {
+    background-color: #f4f4f4;
+    background-size: contain;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    
+    
+}
+
+/* Conteneur du footer */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    
+}
+
+/* Sections du footer */
+.footer-section {
+    flex: 1;
+    padding: 15px;
+    width: 260px;
+    height: 160px;
+}
+
+
+/* Titre de chaque section du footer */
+.footer-section h3 {
+    font-size: 18px;
+    color: #CD5C5C;
+    margin-bottom: 10px;
+}
+
+
+/* Style pour les liens sociaux */
+.social-media a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #CD5C5C;
+}
+
+/* Section de bas de footer (copyright) */
+.footer-bottom {
+    background-color: #e2e2e2;
+    padding: 15px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+
+
+/* Styles de base pour le menu */
+.header .navbar {
+    display: flex; /* Affichage en ligne par défaut */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Styles de base pour le menu */
+.header .navbar {
+    display: flex; /* Affichage en ligne par défaut */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+
+/* Style général pour garder l'apparence intacte */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eee;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+/* Logo */
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--rose_blanc);
+}
+
+.header .logo i {
+    color: var(--rose);
+}
+
+/* Menu de navigation */
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+
+/* Icônes de la barre supérieure */
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--rose_blanc);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+/* Le bouton menu */
+#menu-btn {
+    display: none; /* Par défaut, on ne montre pas le bouton hamburger */
+}
+
+@media (max-width: 768px) {
+    /* Cacher les liens du menu par défaut */
+    .header .navbar {
+        display: none; /* Cache les éléments du menu sur mobile */
+    }
+     .header .logo {
+        font-size: 20px;
+     }
+    /* Afficher le bouton hamburger */
+    #menu-btn {
+        display: block; /* Afficher le bouton hamburger */
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--rose);
+        z-index: 10; /* Pour s'assurer que le bouton soit au-dessus du menu */
+    }
+
+    /* Lorsque le menu est actif, l'afficher */
+    .navbar.active {
+        display: flex; /* Affiche le menu */
+        flex-direction: column; /* Disposer les éléments du menu en colonne */
+        align-items: center; /* Centrer les éléments */
+        position: absolute;
+        top: 100px; /* Sous l'entête */
+        left: 0; /* Alignement à gauche */
+        right: 0; /* Alignement à droite */
+        background-color: #fff; /* Fond blanc pour le menu */
+        box-shadow: var(--box-shadow);
+        padding: 1rem 0;
+        width: 100%; /* Menu en pleine largeur */
+    }
+
+    /* Style des liens de menu lorsqu'il est actif */
+    .navbar a {
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        color: #333;
+        text-align: center;
+        width: 100%; /* Prendre toute la largeur pour un meilleur affichage */
+    }
+
+    /* Ajouter un hover sur les liens du menu */
+    .navbar a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Ajout de cette règle pour s'assurer que la navbar soit bien alignée avec l'image de fond */
+    .header {
+        width: 100%; /* Assurez-vous que le header prend toute la largeur de l'écran */
+        position: relative; /* Position relative pour les éléments positionnés en absolu */
+    }
+
+    .navbar {
+        width: 100%; /* Navbar prend toute la largeur du parent */
+        position: absolute;
+        top: 0; /* Aligné en haut */
+        left: 0; /* Aligné à gauche */
+        right: 0; /* Aligné à droite */
+        display: flex; /* Utilisation de flexbox */
+        justify-content: space-between; /* Espacement entre les éléments */
+        align-items: center; /* Centrer les éléments verticalement */
+    }
+}
+
+
+/* Media Query pour les écrans de taille moyenne */
+@media (max-width: 1020px) {
+    .product-slider .box {
+        width: calc(33.33% - 2rem); /* 3 produits par ligne */
+    }
+}
+
+/* Media Query pour les écrans de taille moyenne */
+@media (max-width: 1020px) {
+    .product-slider .box {
+        width: calc(33.33% - 2rem); /* 3 produits par ligne */
+    }
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    .box-container {
+        justify-content: center; /* Centrer les cartes sur les petits écrans */
+    }
+
+    .box {
+        width: 90%; /* Les cartes prennent plus de largeur sur les écrans petits */
+        flex: 1 1 45%; /* Chaque carte occupe 45% de la largeur */
+    }
+}
+box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Réduire la taille des boxes */
+    .features .box {
+        width: 280px;  /* Réduire la largeur de la box */
+        height: 350px; /* Réduire la hauteur de la box */
+        padding: 2rem 1.5rem; /* Réduire le padding pour mieux s'adapter à l'écran */
+        margin-right: 60px;
+    }
+
+    /* Adapter la grille pour les petits écrans */
+    .features .box-container {
+        grid-template-columns: repeat(2, 1fr); /* Passer à 2 colonnes */
+        gap: 1.5rem; /* Réduire l'espacement entre les boxes */
+        width: 280px;
+    }
+
+    .features .box .cardbanner .img2,
+    .features .box .cardbanner .img5 {
+        width: 130px; /* Réduire la hauteur des images */
+    }
+
+    /* Ajuster la taille de la carte */
+    .features .box .cardbanner img {
+        width: 100%; /* S'assurer que l'image occupe toute la largeur de la box */
+        height: auto; /* Hauteur ajustée automatiquement */
+    }
+
+    .features .heading {
+        font-size: 28px; /* Réduire la taille du titre */
+    }
+
+    .features .box .card-content h3 {
+        font-size: 1.5rem; /* Réduire la taille du texte du titre */
+    }
+
+    .features .box .btn {
+        font-size: 0.9rem; /* Réduire la taille du bouton */
+        padding: 0.8rem 1.4rem; /* Réduire le padding du bouton */
+    }
+
+    .features .box .price-wrapper {
+        font-size: 12px; /* Réduire la taille de la police du prix */
+    }
+
+    .features .box .btn-wrapper .product-btn {
+        font-size: 1.5rem; /* Réduire la taille des icônes */
+        padding: 1rem; /* Réduire le padding des icônes */
+    }
+
+    .features .box .tooltip {
+        font-size: 1.2rem; /* Réduire la taille de la tooltip */
+    }
+}
+
+/* Media Query pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Réduire encore la taille des boxes */
+    .features .box {
+        width: 230px;  /* Réduire davantage la largeur de la box */
+        height: 360px; /* Réduire davantage la hauteur de la box */
+        padding: 1.5rem 1rem; /* Réduire le padding pour optimiser l'espace */
+        margin-left: 50px;
+    }
+
+    .features .box-container {
+        grid-template-columns: 1fr; /* Passer à une seule colonne */
+        gap: 1rem; /* Réduire l'espacement entre les boxes */
+    }
+
+    .features .box .cardbanner .img1,
+    .features .box .cardbanner .img5 {
+        height: 200px; /* Réduire la taille des images */
+        width: 200px;
+    }
+
+    .features .box .cardbanner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .features .heading {
+        font-size: 24px; /* Réduire la taille du titre */
+        margin-top: -40px;
+    }
+
+    .features .box .card-content h3 {
+        font-size: 1.3rem; /* Réduire la taille du titre dans la box */
+    }
+
+    .features .box .btn {
+        font-size: 0.8rem; /* Réduire la taille du bouton */
+        padding: 0.7rem 1.2rem; /* Réduire le padding du bouton */
+    }
+
+    .features .box .price-wrapper {
+        font-size: 11px; /* Réduire la taille de la police du prix */
+    }
+
+    .features .box .btn-wrapper .product-btn {
+        font-size: 1.4rem; /* Réduire la taille des icônes */
+        padding: 0.9rem; /* Réduire le padding des icônes */
+    }
+
+    .features .box .tooltip {
+        font-size: 1rem; /* Réduire la taille de la tooltip */
+    }
+}
+
+/* Media Query pour les écrans de tablette (max-width: 992px) */
+@media (max-width: 992px) {
+    .categories {
+        padding: 3rem 5%; /* Réduire le padding */
+    }
+
+    .categories .heading {
+        font-size: 30px; /* Réduire la taille du titre */
+        margin-top: -15px;
+    }
+
+    .categories .box-container {
+        grid-template-columns: repeat(2, 1fr); /* Deux éléments par ligne */
+    }
+
+    .categories .box {
+        width: 100%; /* Adapter la largeur des boxes à 100% */
+        height: 350px; /* Réduire la hauteur des boxes */
+    }
+
+    .categories .box img {
+        width: 180px; /* Réduire la taille des images */
+        height: 210px; /* Réduire la taille des images */
+    }
+
+    .categories .btn {
+        font-size: 0.9rem; /* Réduire la taille du texte du bouton */
+    }
+}
+
+/* Media Query pour les petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+    .categories {
+        padding: 2rem 4%; /* Ajuster le padding pour les écrans plus petits */
+    }
+
+    .categories .heading {
+        font-size: 26px; /* Réduire encore la taille du titre */
+    }
+
+    .categories .box-container {
+        grid-template-columns: 1fr; /* Un élément par ligne */
+        gap: 4rem; /* Réduire l'espacement entre les éléments */
+        width: 60%;
+        margin-right: 70px;
+    }
+
+    .categories .box {
+        width: 100%; /* Largeur à 100% pour une seule colonne */
+        display: flex;
+        flex-direction: column; /* Organiser les éléments verticalement */
+        justify-content: space-between; /* Espacement entre l'image et le bouton */
+        align-items: center; /* Centrer les éléments horizontalement */
+        padding: 2rem 1rem; /* Ajuster le padding */
+        height: 400px; /* Ajuster la hauteur de la boîte */
+    }
+
+    .categories .box img {
+        width: 150px; /* Réduire la taille des images */
+        height: 180px; /* Réduire la taille des images */
+        margin-bottom: 1rem;
+    }
+
+    .categories .btn {
+        font-size: 0.8rem; /* Réduire la taille du texte du bouton */
+        margin-top: auto; /* Positionner le bouton en bas de la boîte */
+        padding: 0.8rem 1.5rem; /* Ajuster la taille du bouton */
+        text-align: center; /* Centrer le texte à l'intérieur du bouton */
+    }
+}
+
+/* Media Query pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .categories {
+        padding: 2rem 2%; /* Réduire le padding pour les très petits écrans */
+    }
+
+    .categories .heading {
+        font-size: 22px; /* Taille du titre encore réduite */
+    }
+
+    .categories .box-container {
+        grid-template-columns: 1fr; /* Garder un seul élément par ligne */
+    }
+
+    .categories .box {
+        width: 100%; /* Un élément par ligne */
+        height: 250px; /* Réduire encore la hauteur des boxes */
+        padding: 1rem; /* Ajuster le padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Espacement entre l'image et le bouton */
+        align-items: center; /* Centrer les éléments horizontalement */
+    }
+
+    .categories .box img {
+        width: 130px; /* Réduire la taille des images */
+        height: 150px; /* Réduire la taille des images */
+        margin-bottom: 1rem;
+    }
+
+    .categories .btn {
+        font-size: 0.7rem; /* Réduire la taille du texte du bouton */
+        padding: 0.6rem 1.2rem; /* Réduire la taille du bouton */
+    }
+}
+
+
+
+/* Footer responsive */
+@media (max-width: 480px) {
+    .footer-container {
+        display: flex;
+        flex-direction: row; /* Conserver une disposition horizontale */
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        font-size: 10px;
+    }
+    
+    .footer-section {
+        flex: 1 1 30%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: -30px;
+        font-size: 10px;
+    }
+    .footer-section h3{
+        font-size: 10px;
+    }
+    .footer-section.social-media a {
+        font-size: 14px;
+        margin: 5px 0;
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+

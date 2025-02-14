@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="Ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>categories</title>
+    
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="path_to_your_css_file.css"> <!-- Mettre votre fichier CSS ici -->
+    <link rel="stylesheet" href="../_css/stylemenu.css">
+</head>
+<body>
+
+    <!-- Header section starts -->  
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>مكتبة وئام</a>
+        <nav class="navbar">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../_html/promotion.html">التخفيضات</a>
+            <a href="../_html/ecrivain.html">المؤلفين</a>
+          <a href="../_html/categoreies.html">التصنيفات</a>
+
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <a href="../_html/formulaire.html"><div class="fas fa-user" id="login-btn"></div></a> 
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <a href="favorite.html"><div class="fas fa-heart" id="favorites-icon">
+                <span id="favorites-count"></span>
+        </div></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="ابحت الان...">
+            <label for="search-box" class="search-box"></label>
+        </form>
+        <div class="cart">
+            <h2 class="cart-title">السلة</h2>
+            <div class="cart-content">
+                <!-- Articles du panier ici -->
+            </div>
+            <div class="total">
+                <div class="total-title">المجموع</div>
+                <div class="total-price">0 د.م</div>
+            </div>
+            <button type="button" class="btn-buy">اشتري الان</button>
+            <i class="bx bx-x" id="close-cart"></i>
+        </div>
+    </header>
+    <!-- Header section ends -->
+
+     <!-- Author Section -->
+      <div class="home">
+    
+
+    <section class="categories" id="categories">
+        <h1 class="heading">التصنيفات</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="../_image/كتب دينية.jpeg" alt="">
+                <h3>كتب دينية</h3>
+                <br> 
+                <a href="../_html/كتب دينية.html" class="btn">اقرا المزيد</a>
+            </div>
+    
+            <div class="box">
+                <img src="../_image/كتب التنمية البشرية.jpeg" alt="">
+                <h3>كتب التنمية البشرية</h3>
+                <br>
+                <a href="../_html/كتب التنمية البشرية.Html" class="btn">اقرا المزيد</a>
+            </div>
+    
+            <div class="box">
+                <img src="../_image/كتب علم النفس.webp" alt="">
+                <h3>كتب علم النفس</h3>
+                <br><a href="../_html/كتب علم النفس.html" class="btn">اقرا المزيد</a>
+            </div>
+    
+            <div class="box">
+                <img src="../_image/روايات خيالية.jpg" alt="">
+                <h3>روايات خيالية</h3>
+                <br><a href="../_html/روايات خيالية.html" class="btn">اقرا المزيد</a>
+            </div>
+        </div>
+    </section>
+    
+   <!-- Footer -->
+   <footer>
+    <div class="footer-container">
+        <!-- Section des informations sur la librairie -->
+         
+        <div class="footer-section">
+            <h3>مكتبة وئام </h3>
+            <p>مرحبا بكم في متجرنا للكتب على الانترنت! اكتشف مجموعة واسعة من الكتب التي تقدم عناوين لجميع الأذواق والأعمار</p>
+        </div>
+
+        <!-- Section des informations de contact -->
+        <div class="footer-section">
+            <h3>اتصل بنا</h3>
+            <p>البريد الإلكتروني: contact@librairiewiam.com</p>
+            <p>الهاتف: +1234567890</p>
+        </div>
+
+        <!-- Section des réseaux sociaux -->
+        <div class="footer-section social-media">
+            <h3>تابعنا</h3>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <!-- Section de copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Librairie Wiam. Tous droits réservés.</p>
+    </div>
+ </footer>
+     </section>
+
+    <script src="path_to_your_script.js"></script>
+
+</body>
+</html>

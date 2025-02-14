@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="Ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>librairie_wiam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../_css/style.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=53372&format=png&color=000000">
+    <style>
+
+/* Style pour la section Favoris */
+.favoris {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.favoris h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Conteneur pour afficher les produits côte à côte */
+#favoris-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style des éléments de favoris */
+.favorite-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgba(240, 248, 247, 0.8); /* Fond semi-transparent */
+    transition: transform 0.3s ease;
+    width: 250px;  /* Fixer la largeur de la carte */
+    height: 380px;  /* Fixer la hauteur de la carte */
+    cursor: pointer;
+    overflow: hidden; /* Assurer que les éléments en dehors des limites de la carte ne débordent pas */
+}
+
+/* Effet au survol */
+.favorite-item:hover {
+    transform: scale(1.05);
+}
+
+/* Style des images de produits */
+.favorite-img {
+    width: 200px;
+    height: 200px;
+    transition: .25s ease;
+    border-radius: 15px;
+}
+
+/* Style des titres et des descriptions des produits */
+.favorite-item h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    flex-grow: 1;  /* Assurer que le texte se place correctement dans la carte */
+}
+
+.favorite-item p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.favorite-item .price-wrapper {
+    font-weight: bold;
+    color: #af6d6d;
+}
+
+.favorite-item .del {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.favorite-item .price {
+    color: #af6d6d;
+}
+
+/* Style du bouton d'ajout au panier */
+.btn-add-to-cart {
+    padding: .9rem 1.6rem;
+    background-color: #a86464;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #a86464;
+}
+
+    </style>
+
+</head>
+<body>
+    <!-- Header section starts -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="background"></div>
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>مكتبة وئام</a>
+            <div class="background"></div>
+        </div>
+        <nav class="navbar">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../_html/promotion.html">التخفيضات</a>
+            <a href="../_html/ecrivain.html">المؤلفين</a>
+            <a href="../_html/categoreies.html">التصنيفات</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="ابحت الان...">
+            <label for="search-box" class="search-box"></label>
+        </form>
+
+
+
+       <!--cart-->
+<div class="cart" id="cart">
+    <h2 class="cart-title">السلة</h2>
+    <!--content-->
+    <div class="cart-content">
+        
+    </div>
+    <!--total-->
+    <div class="total">
+        <div class="total-title">المجموع</div>
+        <div class="total-price">0د.م</div>
+    </div>
+    <!--buy button-->
+    <button type="button" class="btn-buy">اشتري الان</button>
+    <!--cart close-->
+    <i class='bx bx-x' id="close-cart"></i>
+</div>
+
+    </header>
+    <!-- Header section ends -->
+
+     <!-- Home section starts -->
+<section class="home" id="home">
+    <div class="content-box">
+    </div>
+</section>
+
+    <!-- Home section ends -->
+
+    <section class="favoris">
+        <h2>Mes Favoris</h2>
+        <div id="favoris-list">
+            <!-- Les produits favoris seront ajoutés ici dynamiquement via JavaScript -->
+        </div>
+    </section>
+    
+
+   
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Librairie Wiam</h3>
+                <p>Bienvenue dans notre librairie en ligne ! Découvrez une large sélection de livres, offrant des titres pour tous les goûts et tous les âges.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p>Email : contact@librairiewiam.com</p>
+                <p>Téléphone : 0702977092</p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>Suivez-nous</h3>
+                <a href="https://facebook.com" target="_blank">whatsapp</a>
+                <a href="https://twitter.com" target="_blank">TikTok</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Librairie Wiam. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../_js/tous.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   
+</body>
+</html>

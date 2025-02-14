@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="Ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>librairie_wiam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="_css/style.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=53372&format=png&color=000000">
+</head>
+<body>
+    <!-- Header section starts -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="background"></div>
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>مكتبة وئام</a>
+            <div class="background"></div>
+        </div>
+        <nav class="navbar">
+            <a href="#home">الرئيسية</a>
+            <a href="_html/promotion.html">التخفيضات</a>
+            <a href="_html/ecrivain.html">المؤلفين</a>
+            <a href="_html/categoreies.html">التصنيفات</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="ابحت الان...">
+            <label for="search-box" class="search-box"></label>
+        </form>
+
+
+
+       <!--cart-->
+<div class="cart" id="cart">
+    <h2 class="cart-title">السلة</h2>
+    <!--content-->
+    <div class="cart-content">
+        
+    </div>
+    <!--total-->
+    <div class="total">
+        <div class="total-title">المجموع</div>
+        <div class="total-price">0د.م</div>
+    </div>
+    <!--buy button-->
+    <button type="button" class="btn-buy">اشتري الان</button>
+    <!--cart close-->
+    <i class='bx bx-x' id="close-cart"></i>
+</div>
+
+    </header>
+    <!-- Header section ends -->
+
+    <!-- Home section starts -->
+<section class="home" id="home">
+    <div class="content-box">
+        <div class="text-container">
+            <h1 class="h1"><span>مكتبة</span> وئام</h1><br>
+           <b><p>إنّ الكتاب هو الجليس الذي لا يُنافق، ولا يمل،<br> ولا يُعاتب إذا جفوته، ولا يُفشي سرك.</p></b>
+        </div>
+        
+    </div>
+</section>
+
+    <!-- Home section ends -->
+
+    <!-- Product section starts -->
+    <section class="products" id="products">
+        <h1 class="heading">الكتب <span>الاكتر شهرة</span></h1>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="_image/سلسلة بساتين عربستان.jpeg" alt="Product 1">
+                    <h3>سلسلة بساتين عربستان</h3>
+                    <div class="price">300dhs</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">اضف الى السلة</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="_image/arss.jpeg" alt="Product 2">
+                    <h3>آرسس</h3>
+                    <div class="price">50dhs</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">اضف الى السلة</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="_image/رسائل-من-القرآن.webp" alt="Product 3">
+                    <h3>رسائل من القرآن</h3>
+                    <div class="price">50dhs</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">اضف الى السلة</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="_image/لأنك الله.jpeg" alt="Product 4">
+                    <h3>لأنك الله</h3>
+                    <div class="price">50dhs</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">اضف الى السلة</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product section ends -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Section des informations sur la librairie -->
+             
+            <div class="footer-section">
+                <h3>مكتبة وئام </h3>
+                <p>مرحبا بكم في متجرنا للكتب على الانترنت! اكتشف مجموعة واسعة من الكتب التي تقدم عناوين لجميع الأذواق والأعمار</p>
+            </div>
+    
+            <!-- Section des informations de contact -->
+            <div class="footer-section">
+                <h3>اتصل بنا</h3>
+                <p>البريد الإلكتروني: contact@librairiewiam.com</p>
+                <p>الهاتف: +1234567890</p>
+            </div>
+    
+            <!-- Section des réseaux sociaux -->
+            <div class="footer-section social-media">
+                <h3>تابعنا</h3>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    
+        <!-- Section de copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Librairie Wiam. Tous droits réservés.</p>
+        </div>
+     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="_js/site.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   
+</body>
+</html>
